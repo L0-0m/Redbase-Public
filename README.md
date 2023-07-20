@@ -1,20 +1,32 @@
 # Redbase
-Stanford CS346 Redbase Project  
-ref：https://web.stanford.edu/class/cs346/2015/
+A relational database implementation based on [Stanford CS346 Redbase Project](https://web.stanford.edu/class/cs346/2015) 
 
 ## 运行
 
 * 运行环境：
-  - OS：   Ubuntu 20.04.4 LTS X64
-  - Linux：5.15.2-051502-generic
-  - 编译器：g++ 9.4.0
+  - OS:         Ubuntu 22.04.1 LTS X64
+  - Linux:      5.19.0-46-generic
+  - Compiler:   g++ 11.3.0
   
 * 构建&调试：
-  - 打开终端并切换到`...redbase/src/`目录，输入`make demo_bplustree`可构建可执行文件`demo_bplustree`。可通过输入`gdb ./demo_bplustree`使用gdb进行调试。
+  - 打开终端并切换到`...redbase/src/`目录，输入`make demo_bplustree`可构建可执行文件`demo_bplustree`。
+  - 可通过`gdb ./demo_bplustree`进行调试。
   - 同理可根据test文件名，构建PF、RM、IX模块的测试文件。如`make ix_test`构建测试文件。
   - 输入`make clean`清除所有构建产生的文件。
 
-## Rrcord Manager Component
+## [The Paged File Component](https://web.stanford.edu/class/cs346/2015/redbase-pf.html)
+
+* 简介
+  - 一个存储与缓冲区管理器，负责管理Page的磁盘存储与缓冲区调度。
+  - 设定连续的SIZE(=4096B)大小为一个Page，Page是数据在内存-磁盘之间交换的单位。
+  - 在磁盘上以若干Page组成的链表式堆文件的形式物化(materialization)数据；
+  - 在内存中维护一个 Buffer Pool 来缓存 Pages，并根据 LRU 策略调度缓存。
+
+* 特点
+  - 采用链表式堆文件形式组织磁盘数据。
+  - 内存中维护 Buffer Pool ，通过 hashtable 实现命中查询，组织 LRU 链调度缓存数据。
+
+## [Rrcord Manager Component](https://web.stanford.edu/class/cs346/2015/redbase-rm.html)
 
 * 简介
   - 为上层提供接口来管理文件中无序的record。
@@ -24,7 +36,7 @@ ref：https://web.stanford.edu/class/cs346/2015/
   - 页内record依靠bitmap索引，查找bitmap利用循环展开加速
   - 用链表组织文件内有空余slot的页面，方便插入
 
-## Indexing Manager Component
+## [Indexing Manager Component](https://web.stanford.edu/class/cs346/2015/redbase-ix.html)
 
 * 简介
   - 为上层提供接口来为record中属性构建B+树索引。
