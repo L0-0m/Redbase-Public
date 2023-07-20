@@ -1,7 +1,7 @@
 //
 // File:        rm_rid.cc
 // Description: RID class implementation
-// Authors:     Renzhong Wang (rzwang@mail.ustc.edu.cn)
+// Authors:     L0-0m (rzwang@mail.ustc.edu.cn)
 //
 
 // We separate the interface of RID from the rest of RM because some

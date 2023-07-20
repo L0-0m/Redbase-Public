@@ -40,10 +40,10 @@ PF_SOURCES     = pf_buffermgr.cc pf_error.cc pf_filehandle.cc \
 RM_SOURCES     = rm_manager.cc rm_filehandle.cc rm_record.cc \
                  rm_filescan.cc rm_error.cc rm_rid.cc
 IX_SOURCES     = ix_manager.cc ix_indexhandle.cc ix_indexscan.cc ix_error.cc
-# SM_SOURCES     = sm_manager.cc printer.cc sm_error.cc sm_attriterator.cc
-# QL_SOURCES     = ql_error.cc ql_manager.cc ql_node.cc ql_nodeproj.cc ql_noderel.cc ql_nodejoin.cc ql_nodesel.cc qo_manager.cc
-# UTILS_SOURCES  = dbcreate.cc dbdestroy.cc redbase.cc
-# PARSER_SOURCES = scan.c parse.c nodes.c interp.c
+SM_SOURCES     = sm_manager.cc printer.cc sm_error.cc sm_attriterator.cc ql_manager_stub.cc
+# QL_SOURCES     = ql_manager_stub.cc
+UTILS_SOURCES  = dbcreate.cc dbdestroy.cc redbase.cc
+PARSER_SOURCES = scan.c parse.c nodes.c interp.c
 TESTER_SOURCES = pf_test1.cc pf_test2.cc pf_test3.cc rm_test.cc ix_test.cc demo_bplustree.cc
 
 PF_OBJECTS     = $(addprefix $(BUILD_DIR), $(PF_SOURCES:.cc=.o))

@@ -3,7 +3,7 @@
 // Description: Test IX component
 // Authors:     Jan Jannink
 //              Dallan Quass (quass@cs.stanford.edu)
-//              Renzhong Wang (rzwang@mail.ustc.edu.cn)
+//              L0-0m (rzwang@mail.ustc.edu.cn)
 //
 // This test shell contains a number of functions that will be useful in
 // testing your IX component code.  In addition, a couple of sample

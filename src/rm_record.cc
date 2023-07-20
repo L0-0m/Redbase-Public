@@ -1,7 +1,7 @@
 //
 // File:        rm_record.cc
 // Description: RM_Record class implementation
-// Authors:     Renzhong Wang (rzwang@mail.ustc.edu.cn)
+// Authors:     L0-0m (rzwang@mail.ustc.edu.cn)
 //
 
 #include "rm_internal.h"

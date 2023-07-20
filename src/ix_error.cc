@@ -1,7 +1,7 @@
 //
 // File:        ix_filescan.cc
 // Description: IX_PrintError function
-// Authors:     Renzhong Wang (rzwang@mail.ustc.edu.cn)
+// Authors:     L0-0m (rzwang@mail.ustc.edu.cn)
 //
 
 #include <cerrno>

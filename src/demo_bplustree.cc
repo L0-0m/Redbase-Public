@@ -1,7 +1,7 @@
 //
 // File:        demo_bplustree.cc
 // Description: B Plus Tree demo
-// Authors:     Renzhong Wang (rzwang@mail.ustc.edu.cn)
+// Authors:     L0-0m (rzwang@mail.ustc.edu.cn)
 //
 
 //////////////////////////////////////////////////////////////////
@@ -20,7 +20,7 @@
 #include "ix.h"
 
 #define FILENAME     "bplustree"    // demo file name
-#define FEW_ENTRIES  72             // 插入entry数量
+#define FEW_ENTRIES  8             //  执行测试时插入的entry数量
 
 //
 // Global component manager variables
@@ -44,7 +44,7 @@ int main()
     rmm.DestroyFile(FILENAME);
     ixm.DestroyIndex(FILENAME, 0);
 
-    // 随机函数
+    // 方便复现测试结果
     // srand( (unsigned)time(NULL));
 
     if(rc = Test())

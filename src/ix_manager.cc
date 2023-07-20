@@ -1,7 +1,7 @@
 //
 // File:        ix_manager.cc
 // Description: IX_Manager class implementation
-// Authors:     Renzhong Wang (rzwang@mail.ustc.edu.cn)
+// Authors:     L0-0m (rzwang@mail.ustc.edu.cn)
 //
 
 #include <string>
